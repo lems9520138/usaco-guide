@@ -37,7 +37,6 @@ A planar graph is a set of vertices and edges that can be drawn in a way where n
 
 *Example of a Planar Graph*
 
-
 Given a planar graph, we can apply Euler's formula $V - E + F = 2$ to relate the number of vertices ($V$), edges ($E$), and faces ($F$) of the graph.
 
 The equation is related to the theorem that for any convex polyhedron, $V - E + F = 2$ will hold true, due to the fact that every convex polyhedron may be flattened into a planar graph.
@@ -52,11 +51,11 @@ This can be expanded to graphs that are not connected to incorporate connected c
 
 ## Explanation
 
-Firstly, notice that the fence will create a planar graph, where every closed-off region (including the region that consists of everything outside the fences) counts as a face. Every time we combine two faces by adding a gate, the number of faces will decrease by $1$. Thus, the answer will just be the number of faces in the graph minus one.
+First, notice that because the fence never intersects itself, it creates a planar graph in which every closed-off region, including the region outside the fences, counts as a face. Every time we combine two faces by adding a gate, the number of faces decreases by $1$. Thus, the answer is the number of faces in the graph minus one.
 
-As a reminder, Euler's Formula states that $f=e-v+2$. To count the number of edges, we only need to count the number of unique unit-length segments Farmer John places. Likewise, to count the number of vertices, we just need to count the number of unique positions Farmer John visited. This can easily be achieved using sets.
+As a reminder, Euler's formula states that $F=E-V+2$, where the fences represent edges and the coordinates represent vertices. To count the edges, we only need to count the unique unit-length segments Farmer John places. Likewise, to count the vertices, we only need to count the unique positions Farmer John visits. Both counts can easily be obtained using sets.
 
-Once we calculate these values, we can simply plug them back into the equation and get our answer.
+Once we calculate these values, we can simply plug them back into the formula and get our answer.
 
 ## Implementation
 **Time Complexity:** $\mathcal{O}(N \log N)$

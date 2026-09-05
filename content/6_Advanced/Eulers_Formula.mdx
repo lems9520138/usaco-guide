@@ -9,7 +9,7 @@ prerequisites:
 frequency: 1
 ---
 
-## Recources
+## Resources
 
 <Resources>
 	<Resource
@@ -46,14 +46,13 @@ This can be expanded to graphs that are not connected to incorporate connected c
 
 
 
-
 ## Example 1
 
 <Problems problems="e1" />
 
 Firstly, notice that the fence will create a planar graph, where every closed-off region (including the region that consists of everything outside the fences) counts as a face. Every time we combine two faces by adding a gate, the number of faces will decrease by $1$. Thus, the answer will just be the number of faces in the graph minus one.
 
-As a reminder, Euler's Formula states that $f=e−v+2$. To count the number of edges, we only need to count the number of unique unit-length segments Farmer John places. Likewise, to count the number of vertices, we just need to count the number of unique positions Farmer John visited. This can easily be achieved using sets.
+As a reminder, Euler's Formula states that $f=e-v+2$. To count the number of edges, we only need to count the number of unique unit-length segments Farmer John places. Likewise, to count the number of vertices, we just need to count the number of unique positions Farmer John visited. This can easily be achieved using sets.
 
 Once we calculate these values, we can simply plug them back into the equation and get our answer.
 
